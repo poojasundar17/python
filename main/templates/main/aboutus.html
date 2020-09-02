@@ -1,0 +1,105 @@
+
+<head>
+   {% load static %}
+   
+  <link rel="stylesheet" href=" {% static  'css/style1.css' %}">
+  <link rel="stylesheet" href=" {% static  'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet"  href=" {% static  'css/https://www.w3schools.com/w3css/4/w3.css' %}">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="#">IG Ecommerce</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="/index">Home<span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link" href="/aboutus">About Us<span class="sr-only"></span></a>
+	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link" href="/product">Product<span class="sr-only"></span></a>
+	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link" href="/contact">Contact Us<span class="sr-only"></span></a>
+	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link" href="/feedback">Feedback<span class="sr-only"></span></a>
+	      </li>
+	    </ul>
+	  </div>
+</nav>
+
+ <div class="about-box-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="noo-sh-title"><span>igenius</span></h2>
+                    <p>iGenius is a leading web development and cloud solutions company since 2006.
+					We are the one-stop IT provider for domain names, web hosting, dedicated servers, cloud platform and Microsoft solutions.
+                    For many years, we are the leader amongst the most successful and prominent web hosting providers in Singapore and Global Presence.
+                    Through many years of hard work and dedication, we have developed solutions for all market sectors and have grown to offer cutting edge web hosting solutions.
+                    Through technological innovations, we continue to strive to offer our customers new and improved ways of going online.
+                    We understand that going online is no easy feat so rest assured that iGenius will always be there 24/7 for you every step of the way!</p>
+                    <p>iGenius serves over 1,000 businesses worldwide and to stay ahead, we work closely with the very best local and international industry partners.
+					<br>Businesses around the world trust iGenius to deliver the best web hosting services in the industry. Try us and feel the difference today!</p>
+                
+ </div>
+                <div class="col-lg-6">
+                    <div class="banner-frame"> <img src="{% static 'images/ig.png' %}" width="500" height="333">
+                    </div>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="service-block-inner">
+                        <h3>Software Leader</h3>
+                        <p>Since 2006, iGenius has remained a leading software development company with our continuous achievements. </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="service-block-inner">
+                        <h3>Professional Team</h3>
+                        <p>Our team continue to grow with our Command Centre operating 24/7 around the clock. We connect people and data. </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="service-block-inner">
+                        <h3>Full Support</h3>
+                        <p>Our teams work 24 x 7 x 365 ensuring your services are up all the time.Our team continue to grow with our Command Centre operating 24/7 around the clock.  </p>
+                    </div>
+                </div>
+            </div>
+      
+<h11>Our Partners</h11>
+         <center> <div class="w3-content w3-section"></div></center>
+ <center> <img class="mySlides w3-animate-fading" src="{% static 'images/sam.jpg' %}" ></center> 
+ <center><img class="mySlides w3-animate-fading" src="{% static 'images/iphone1.jpg' %}"></center>  
+ <center> <img class="mySlides w3-animate-fading" src="{% static 'images/kss.jpg' %}"></center>
+  
+  
+</div></center>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 5000);    
+}
+</script>
+</body>         

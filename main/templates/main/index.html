@@ -1,0 +1,307 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+	{% load static %}
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Ecommerce</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'css/style5.css' %}">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+		
+
+		<!-- CSS here -->
+            <link rel="stylesheet" href="{% static 'assets1/css/bootstrap.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets1/css/owl.carousel.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets1/css/flaticon.css' %}">
+            <link rel="stylesheet" href="{% static 'assets1/css/slicknav.css' %}">
+            <link rel="stylesheet" href="{% static 'assets1/css/animate.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets1/css/magnific-popup.css' %}">
+            <link rel="stylesheet" href="{% static 'assets1/css/fontawesome-all.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets1/css/themify-icons.css' %}">
+            <link rel="stylesheet" href="{% static 'assets1/css/slick.css' %}">
+            <link rel="stylesheet" href="{% static 'assets1/css/nice-select.css' %}">
+            <link rel="stylesheet" href="{% static 'assets1/css/style.css' %}">
+   </head>
+
+   <body>
+       
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+
+    <header>
+        <!-- Header Start -->
+       <div class="header-area">
+            <div class="main-header ">
+                <div class="header-top top-bg d-none d-lg-block">
+                   <div class="container-fluid">
+                       <div class="col-xl-12">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="header-info-left d-flex">
+                                    <div class="select-this">
+                                        <a href="index.html">IG Ecommerce</a>
+                                    </div>
+                                </div>
+                                <div class="header-info-right" style="color:#fff;">
+                                   <ul>                                         
+                                       <li><a href="">Home </a></li>
+                                       <li><a href="/aboutus">About Us  </a></li>
+                                       <li><a href="/product">Product</a></li>
+                                       <li><a href="/contact">Contact Us</a></li>
+                                       <li><a href="/feedback">Feedback</a></li>
+				       {% if user.is_authenticated %}
+                                       <li>  {{user.username}}</li>
+                                       <li><a href="account/logout">Logout</a></li>
+                                       {% else %}            
+				       <li><a href="account/register">Register</a></li>
+				       <li><a href="account/login">Login</a></li>
+				       {% endif %}
+                                 
+                                   </ul>
+                                </div>
+                            </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+       </div>
+        <!-- Header End -->
+    </header>
+
+    <main>
+
+        <!-- slider Area Start -->
+        <div class="slider-area ">
+            <!-- Mobile Menu -->
+            <div class="slider-active">
+                <div class="single-slider slider-height" data-background="{% static 'assets1/img/hero/bg3.jpg' %}">
+                    <div class="container">
+                        <div class="row d-flex align-items-center justify-content-between">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block">
+                                <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
+                                    <img src="{% static 'assets1/img/hero/hero_man.png' %}" alt="">
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInRight" data-delay=".4s">Shopping Never Ends</span>
+                                    <h1 data-animation="fadeInRight" data-delay=".6s">Online <br>Shopping</h1>
+                                    <p data-animation="fadeInRight" data-delay=".8s">Best Collection By 2020!</p>
+                                    <!-- Hero-btn -->
+                                    <div class="hero__btn" data-animation="fadeInRight" data-delay="1s">
+                                        <a href="/product" class="btn hero-btn">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+        <!-- Category Area Start-->
+        <section class="category-area section-padding30">
+            <div class="container-fluid">
+                <!-- Section Tittle -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-tittle text-center mb-85">
+                            <h2>Shop by Category</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="single-category mb-30">
+                            <div class="category-img">
+                                <img style="border:3px solid black; weight:400px; height:400px;" src="{% static 'assets1/img/categori/cat1.jpg' %}" alt="">
+                                <div class="category-caption">
+                                    <h2>Women`s</h2>
+                                    <span class="collection">New Collection</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-xl-4 col-lg-6">
+                        <div class="single-category mb-30">
+                            <div class="category-img text-center">
+                                <img style="border:3px solid black; weight:400px; height:400px;" src="{% static 'assets1/img/categori/cat2.jpg' %}" alt="">
+                                <div class="category-caption">
+                                    <h2>Fashion Cloth</h2>
+				    <span class="collection">New collection</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="single-category mb-30">
+                            <div class="category-img">
+                                <img style="border:3px solid black; weight:400px; height:400px;" src="{% static 'assets1/img/categori/cat3.jpg' %}" alt="">
+                                <div class="category-caption">
+                                    <h2>Men`s Cloth</h2>
+                                    <span class="collection">New Collection</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Category Area End-->
+        <!-- Best Product Start -->
+        <div class="best-product-area lf-padding" >
+           <div class="product-wrapper bg-height" style="background-image: url('static/assets1/img/categori/card.png')">
+                <div class="container position-relative">
+                    <div class="row justify-content-between align-items-end">
+                        <div class="product-man position-absolute  d-none d-lg-block">
+                            <img src="{% static 'assets1/img/categori/card-man.png' %}" alt="">
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 d-none d-lg-block">
+                            <div class="vertical-text">
+                                <span>Manz</span>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8">
+                            <div class="best-product-caption">
+                                <h2>Find The Best Product<br> from Our Shop</h2>
+                                <p>Happiness is not in money, but in shopping!</p>
+                                <a href="/product" class="black-btn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+           <!-- Shape -->
+           <div class="shape bounce-animate d-none d-md-block">
+               <img src="{% static 'assets1/img/categori/card-shape.png' %}" alt="">
+           </div>
+        </div>
+        <!-- Best Product End-->
+        
+
+        <!-- Gallery Start-->
+        <div class="gallery-wrapper lf-padding"><br><br><br><br>
+            <div class="gallery-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="gallery-items">
+                            <img src="{% static 'assets1/img/gallery/arrivel_3.png' %}" alt="">
+                        </div> 
+                        <div class="gallery-items">
+                            <img src="{% static 'assets1/img/gallery/feature_2.png' %}" alt="">
+                        </div>
+                        <div class="gallery-items">
+                            <img src="{% static 'assets1/img/gallery/arrivel_4.png' %}" alt="">
+                        </div>
+         <div class="gallery-items">
+                            <img src="{% static 'assets1/img/gallery/feature_3.png' %}" alt="">
+                        </div>
+                        <div class="gallery-items">
+                            <img src="{% static 'assets1/img/gallery/arrivel_1.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div><br><br><br><br>
+        </div>
+        <!-- Gallery End-->
+
+    </main>
+    
+    <footer>
+       <div class="footer-top">
+           <div class="container">
+               <div class="row">
+                   <div class="col-m-3 col-sm-6 col-xs-12 segment-one md-mb-30 sm-mb-30">
+                       <h3>iGenius</h3>
+                       <p>We’re the native AI company on a mission to reimagine data interaction and create complete data affinity to get the best of what you need most— results. It’s time for human-data fluidity. We simplify the relationship between people and data.</p>
+                   </div>
+                    <div class="col-m-3 col-sm-6 col-xs-12 segment-two md-mb-30 sm-mb-30">
+                       <h2>New Links</h2>
+                       <ul>
+                           <li><a href="#">Home</a></li>
+                           <li><a href="/aboutus">Aboutus</a></li>
+                           <li><a href="/product">Products</a></li>
+                           <li><a href="/contact">Contact Us</a></li>
+                            <li><a href="/feedback">Feedback</a></li>
+                       </ul>
+                   </div>
+                   <div class="col-m-3 col-sm-6 col-xs-12 segment-three sm-mb-30">
+                       <h2>Follow Us</h2>
+                       <p>We are a reliable organization engaged in mca provider a qualitative range of industrial products . We are also one of the leading companies of this highly commendable range of products.</p>
+                       <a href="#"><i class="fab fa-facebook"></i></a>
+                       <a href="#"><i class="fab fa-twitter"></i></a>
+                       <a href="#"><i class="fab fa-linkedin"></i></a>
+                       <a href="#"><i class="fab fa-pinterest"></i></a>
+                   </div>
+                   <div class="col-m-3 col-sm-6 col-xs-12 segment-four sm-mb-30">
+                       <h2>Contact Us</h2>
+                       <div class="place">
+                          
+                           <a href="/map"><i class="fa fa-map-marker-alt"></i><span class="text"> iGenius, Chill Sez IT Park,Coimbatore </span></a>  
+                       </div>
+                       <div class="Phone">
+                           <a href="#"><i class="fa fa-phone-alt"></i><span class="text"> +91 9876543210</span></a>
+                       </div>
+                       <div class="Email">
+                           <a href="#"><i class="fa fa-envelope"></i><span class="text"> abc@gmail.com</span></a>    
+                       </div>
+
+                   </div>
+               </div>
+           </div>
+       </div>
+       <p class="footer-bottom-text">All Right reserved by &copy;iGenius.2020</p>
+   </footer> 
+   
+	<!-- JS here -->
+	
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="{% static 'assets1/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="{% static 'assets1/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'assets1/js/popper.min.js' %}"></script>
+        <script src="{% static 'assets1/js/bootstrap.min.js' %}"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="{% static 'assets1/js/jquery.slicknav.min.js' %}"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="{% static 'assets1/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'assets1/js/slick.min.js' %}"></script>
+
+		<!-- One Page, Animated-HeadLin -->
+        <script src="{% static 'assets1/js/wow.min.js' %}"></script>
+		<script src="{% static 'assets1/js/animated.headline.js' %}"></script>
+        <script src="{% static 'assets1/js/jquery.magnific-popup.js' %}"></script>
+
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="{% static 'assets1/js/jquery.scrollUp.min.js' %}"></script>
+        <script src="{% static 'assets1/js/jquery.nice-select.min.js' %}"></script>
+		<script src="{% static 'assets1/js/jquery.sticky.js' %}"></script>
+        
+        <!-- contact js -->
+        <script src="{% static 'assets1/js/contact.js' %}"></script>
+        <script src="{% static 'assets1/js/jquery.form.js' %}"></script>
+        <script src="{% static 'assets1/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'assets1/js/mail-script.js' %}"></script>
+        <script src="{% static 'assets1/js/jquery.ajaxchimp.min.js' %}"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="{% static 'assets1/js/plugins.js' %}"></script>
+        <script src="{% static 'assets1/js/main.js' %}"></script>
+        
+    </body>
+</html>
